@@ -1,0 +1,23 @@
+Hey there, welcome to my python photo mosaic maker using cv2 and PIL.
+
+I will shortly describe how you should use this mosaic make.
+
+First of all you have to provide a picture you want to make a mosaic out of.
+You should put this image into the "res" folder (There will be a default placeholder image, just in case).
+
+After completing the first step you can now call the "mosaicMake" function. You should provide a chopsize (The width and the height of the tile, I personally don't recommend going below 10, otherwise takes a lot of time.) and you should also provide the path to the image in the "res" folder. After that you are good to go.
+
+The code works in a way that it splits an image into chopsize-sized tiles, then pushes the tiles to "cropped_img" folder.
+After that the cropped images get processed in a way, where there is a block created with a solid average color of the corresponding tile, and after that this block gets pushed to "solid_blocks" folder.
+And The last part, which is bulding the mosaic from these solid blocks using cv2.hconcat and cv2.vconcat.
+
+The "cropped_img" and "solid_blocks" clean themselves when calling "makeMosaic" and at the end of the function too.
+
+DISCLAIMER!!!
+DISCLAIMER!!!
+DISCLAIMER!!!
+Be very careful if you decide to alter the code as it can result in images going into wrong folders.
+I am not responsible for any consequnces.
+HAVE FUN!!!
+
+Yusif Malikov.
